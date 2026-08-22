@@ -1,0 +1,12 @@
+🧠 Quick interview concept: Why Git?
+
+Git is a version control system. We use it to:
+
+Track code changes
+Go back to previous versions
+Work safely on features
+Create branches
+Collaborate with other developers
+Push the project to GitHub
+
+For our ERP, we'll make meaningful commits as we complete features—so your GitHub will show the project's actual development journey.
