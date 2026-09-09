@@ -7,3 +7,6 @@ backend/target/
 
 # Java
 *.class
+
+# Spring Boot configuration with local secrets
+backend/src/main/resources/application.properties
