@@ -3,11 +3,23 @@ package com.erp.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController // This annotation indicates that this class is a REST controller, which means it will handle HTTP requests and return responses in a RESTful manner.
+import com.erp.dto.ApiResponse;
+import com.erp.service.ErpService;
+
+@RestController
 public class HelloController {
 
+    private final ErpService erpService;
+
+    public HelloController(ErpService erpService) {
+        this.erpService = erpService;
+    }
+
     @GetMapping("/api/hello")
-    public String hello() {
-        return "Welcome to ERP System";
+    public ApiResponse hello() {
+        return new ApiResponse(
+                erpService.getWelcomeMessage(),
+                "SUCCESS"
+        );
     }
 }
